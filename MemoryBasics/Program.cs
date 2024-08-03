@@ -44,6 +44,7 @@ public static class Program
         // the box variable is a reference to the value type x.
         object box = x;
         ChangeBoxedValue(ref box);
+        ChangeBoxedValue1(box);
         Console.WriteLine(box);
 
         string y = "test";
@@ -63,6 +64,11 @@ public static class Program
     }
 
     private static void ChangeBoxedValue(ref object item)
+    {
+        item = 32;
+    }
+
+    private static void ChangeBoxedValue1(object item)
     {
         item = 32;
     }
